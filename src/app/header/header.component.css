@@ -1,0 +1,113 @@
+
+.header {
+    font-family:'Times New Roman', Times, serif ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #143562;
+    padding: 10px 20px;
+    color: white;
+    width: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 130px;
+    height: 98px;
+    border-radius: 20px;
+    background-color: transparent;
+  }
+  
+  .logo-text {
+    color: #c0d8f7;
+    font-family: 'Almendra' ;
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  .logo-highlight {
+    font-family: 'Water Brush' ;
+    font-size: 25px;
+    color: #2178d6
+    ;
+    margin-left: 5px;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color:#c0d8f7
+    ;
+  }
+
+  .icons :hover{
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.03);  }
+  
+  .icon-button,
+  .pay-button {
+    background: none;
+    border: none;
+    color: #c0d8f7;
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .cart {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: #135cb6;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 5px;
+  }
+
+.user-links {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: relative;
+  background-color: #c0d8f7;
+  color:black;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* Inicialmente escondido */
+  z-index: 1000; /* Asegúrate de que el menú esté por encima de otros elementos */
+}
+
+.dropdown-menu li {
+  z-index: 999;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: #e3ecfb;
+  color: blue;
+}
+
+  
+  

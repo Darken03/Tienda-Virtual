@@ -1,0 +1,19 @@
+<h3 id="categoria-mujeres" class="text-center mt-4">Productos para Mujer</h3>
+<div id="Primera-Columna" class="row row-cols-4 row-cols-md-2 row-cols-lg-4 g-4">
+  <a class="col" *ngFor="let product of productsMujer" #productElement [id]="'product-' + product.id">
+    <section class="listing" (click)="viewDetails(product)">
+      <img class="listing-photo" [src]="product.image" alt="Foto del exterior de {{ product.name }}" crossorigin />
+      <h2 class="listing-heading">
+        <button class="favorite-button" (click)="toggleFavorite($event)">
+          <i class="material-icons" [class.favorite]="isFavorite">favorite</i>
+        </button>
+        {{ product.name }}
+      </h2>
+      <p class="listing-location">{{ product.price | currency }}<br>{{ product.category }}</p>
+      <button (click)="toggleCart(product, $event)" class="add-to-cart-button"
+        [class.active]="activeProducts[product.id]">
+        <i class="material-icons">shopping_cart</i>
+      </button>
+    </section>
+  </a>
+</div>

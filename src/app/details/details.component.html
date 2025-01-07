@@ -1,0 +1,14 @@
+<div class="container mt-4">
+    <section class="listing">
+      <img
+        class="listing-photo"
+        [src]="product.image"
+        alt="Exterior photo of {{ product.name }}"
+        crossorigin
+      />
+      <h2 class="listing-heading">{{ product.name }}</h2>
+      <p class="listing-location">{{ product.price | currency }}<br>{{ product.category }}</p>
+      <p>{{ product.description }}</p>
+    </section>
+  </div>
+  

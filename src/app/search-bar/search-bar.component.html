@@ -1,0 +1,24 @@
+<!-- search-bar.component.html -->
+<div class="search-bar">
+  <button class="location-button" (click)="toggleDropdown()">
+    <i class="material-icons">place</i>
+    <span>{{ selectedLocation }}</span>
+    <i class="material-icons">expand_more</i>
+  </button>
+   
+  <div>
+
+  <div class="search-input">
+    <input type="text" placeholder="Buscar en la tienda ..." />
+    <button class="search-button" type="button">
+      <i class="material-icons">search</i>
+    </button>
+  </div>
+</div>
+</div>
+
+<div id="dropdownMenu" class="dropdown-menu">
+  <ul id="provinceList"></ul>
+</div>
+
+   

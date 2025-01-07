@@ -1,0 +1,8 @@
+<div class="sidebar">
+    <h2>Mostrar</h2>
+    <ul>
+      <li *ngFor="let opcion of opciones" (click)="seleccionarOpcion(opcion.valor)" [class.active]="opcion.valor === opcionSeleccionada">
+        {{ opcion.nombre }}
+      </li>
+    </ul>
+  </div>
