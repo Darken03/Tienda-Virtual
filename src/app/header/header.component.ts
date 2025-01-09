@@ -27,7 +27,7 @@ export class HeaderComponent implements AfterViewInit {
     });
   }
 
-  ngAfterViewInit(): void {}
+  ngAfterViewInit(): void { }
 
   @HostListener('document:click', ['$event'])
   handleOutsideClick(event: Event): void {
@@ -55,10 +55,14 @@ export class HeaderComponent implements AfterViewInit {
 
   navigateToLogin(event: Event): void {
     event.stopPropagation();
-    this.router.navigateByUrl('/login').then(() => {
-      window.location.reload();
+    this.router.navigateByUrl('/Login').then(success => {
+        if (!success) {
+            console.error('Navigation to Login failed');
+        }
+    }).catch(err => {
+        console.error('Error during navigation:', err);
     });
-  }
+}
 
   navigateToRegister(event: Event): void {
     event.stopPropagation();
