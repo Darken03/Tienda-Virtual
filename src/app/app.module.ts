@@ -4,11 +4,14 @@ import { CommonModule } from '@angular/common';
 import { SlidebarComponent } from './slidebar/slidebar.component';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { HttpClient, HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
-  declarations: [SlidebarComponent],
+  declarations: [LoginComponent,AppComponent, SlidebarComponent, ],
   imports: [
-    BrowserModule,  CommonModule
+  BrowserModule,  CommonModule, HttpClientModule, HttpClient, FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent] 

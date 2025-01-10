@@ -22,10 +22,11 @@
 
 			<div class="login">
 				<form>
+					
 					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button (click)="iniciarSesion()">Iniciar Sesión</button>
+					<input type="email" name="email" placeholder="Email" required="" [(ngModel)]="email">
+					<input type="password" name="pswd" placeholder="Password" required="" [(ngModel)]="password">
+					<button (click)="onSubmit()">Iniciar Sesión</button>
 				</form>
 			</div>
 	</div>
